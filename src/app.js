@@ -21,7 +21,7 @@ if ( args.indexOf('watch') >= 0 ) {
     let params = {
         root: dist,
         port: 8888,
-        wait: 800,
+        wait: 500,
         logLevel: 1
     };
 

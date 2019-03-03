@@ -27,9 +27,21 @@ doctype html
 html(lang=lang)
     head
         meta(charset='utf-8')
-        title= map.title
+
+        meta(name='description', content=map.description)
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
         style
             include:stylus ./stylus/main.styl
 
+        title= map.title
+
     body
-        +renderSubject(map, true, 0)
+        header
+            h1 WDRoadmap 0.0.1
+
+        section
+            +renderSubject(map, true, 0)
+
+        footer
+            span (CC) 2019 · WDRoadmap 0.0.1 · No rights reserved by Nobody.
