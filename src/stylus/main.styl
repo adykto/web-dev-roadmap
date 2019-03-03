@@ -1,0 +1,73 @@
+body {
+    background: #1d2a30;
+    color: grey;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+
+details {
+    border: 1px solid #233339;
+    padding: 0.5rem 0 0.5rem 1rem;
+
+    a {
+        color: #45626b;
+        text-decoration: none;
+
+        &:hover {
+            color: #72a2ae;
+        }
+
+        &:visited span {
+            color: #a6ae2c; font-style: italic;
+        }
+    }
+
+    label {
+        color: gray;
+        display: inline-block;
+        padding: 0.5rem 0;
+    }
+
+    summary {
+        color: lightgray;
+        font-size: 1em;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.study {
+    background: #0e171c;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.level-0 {
+    padding: 0;
+
+    &>summary {
+        color: white;
+        font-size: 1.2rem;
+
+        input {
+            display: none;
+            margin-right: 4rem!important;
+        }
+    }
+}
+
+.level-1 {
+    font-size: 0.9rem;
+
+    summary {
+        label {
+            input {
+                display: inline-block;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,9 @@
+---
+title: Básico
+description: Estos temas son necesarios para cualquier rama del Desarrollo Web.
+subjects:
+    linux:
+        file: linux.yml
+
+    vcs:
+        file: vcs.yml

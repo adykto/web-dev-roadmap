@@ -1,77 +1,10 @@
 ---
-# Antes de editar este archivo, asegúrate de comprender la estructura de los subjects. ¡Suerte!
 title: Guía para ser Desarrollador Web
 description: Utiliza la flecha para abrir los temas que te interesa aprender. Tacha los que ya domines a nivel básico.
 subjects:
     common:
-        title: Básico
-        description: Estos temas son necesarios para cualquier rama del Desarrollo Web.
-        subjects:
-            vcs:
-                  title: Sistemas de Control de Versiones
-                  description: Sirve para coordinar y llevar el registro de los cambios realizados en un proyecto, de tal forma que puedas recuperar versiones específicas más adelante.
-                  links:
-                      - title: Medium - Sistemas de Control de Versiones, qué son y por qué amarlos.
-                        url: https://medium.com/@jointdeveloper/sistemas-de-control-de-versiones-qu%C3%A9-son-y-por-qu%C3%A9-amarlos-24b6957e716e
-                        type: url
-                  subjects:
-                      git:
-                            title: GIT
-                            description: Es el sistema de control de versiones más utilizado. No requiere conexión a Internet para trabajar.
-                            links:
-                                - title: GIT - La guía sencilla
-                                  url: http://rogerdudler.github.io/git-guide/index.es.html
-                                  type: url
-                                  rank: 5
-                                - title: Udemy - Introducción a GIT & GitHub (GRATIS)
-                                  url: https://www.udemy.com/introduccion-a-git-github/
-                                  type: course
-                                  rank: 5
-                                - title: Como usar GIT y GitHub fácilmente - Piensa 3D
-                                  url: https://www.youtube.com/watch?v=3XlZWpLwvvo
-                                  type: video
-                                  rank: 4
-                                - title: Aprende Git y GitHub/GitLab de manera rápida y sencilla
-                                  url: https://www.amazon.com.mx/Aprende-GitHub-GitLab-manera-sencilla-ebook/dp/B07GL97TYG/
-                                  type: book
-                                  rank: 3
-                                - title: Manual de Git - Desarrollo Web
-                                  url: https://desarrolloweb.com/manuales/manual-de-git.html
-                                  type: url
-                                  rank: 2
+        file: common.yml
 
-                      svn:
-                            title: SVN - Subversion
-                            description: Es el segundo sistema más utilizado. Es más lento que GIT, ya que para cualquier commit necesita conectarse al repositorio.
-                            links:
-                                - title: Guía rápida de Subversion (SVN)
-                                  url: http://guimi.net/blogs/hiparco/tutoriales/guia-rapida-de-subversion-svn/
-                                  type: url
-                                  rank: 5
-                                - title: Udemy - Control de versiones con Subversion (MX $1,020.00)
-                                  url: https://www.udemy.com/subversion/
-                                  type: course
-                                  rank: 5
-                                - title: Control de versiones con Subversion
-                                  url: http://svnbook.red-bean.com/index.es.html
-                                  type: book
-                                  rank: 4
-                                - title: Curso SVN - 01 - Mauricio Andrade
-                                  url: https://www.youtube.com/watch?v=B80Zyupd_1k
-                                  type: video
-                                  rank: 3
-                      mercurial:
-                            title: Hg - Mercurial
-                            description: El tercer sistema más famoso. Su principal ventaja es el mejor manejo de archivos binarios.
-                            links:
-                                - title: Lo básico de Mercurial - MDN
-                                  url: https://developer.mozilla.org/es/docs/lo_b%C3%A1sico_de_Mercurial
-                                  type: url
-                                  rank: 4
-                                - title: Empezando con mercurial
-                                  url: https://riptutorial.com/es/mercurial
-                                  type: url
-                                  rank: 3
     frontend:
         title: Front-End
         description: Desarrollo de Interfaces de Usuario

@@ -1,0 +1,37 @@
+title: GNU / Linux
+description: Es un sistema operativo basado en UNIX que se utiliza en la mayoría de los servidores web.
+links:
+    - title: ¿Porqué se prefiere un servidor web Linux que Windows?
+      url: https://www.nettix.com.pe/blog/hosting-blog/porque-se-prefiere-un-servidor-web-linux-que-un-servidor-web-windows
+      type: url
+subjects:
+    linux_intro:
+        title: Conceptos Básicos
+        description: Es el sistema de control de versiones más utilizado. No requiere conexión a Internet para trabajar.
+        links:
+            - title: Historia de Linux
+              url: http://rogerdudler.github.io/git-guide/index.es.html
+              type: url
+              rank: 5
+            - title: Udemy - Instalación de Linux (GRATIS)
+              url: https://www.udemy.com/instala-linux-en-tu-pc/
+              type: course
+              rank: 5
+
+    linux_bash:
+        title: BASH - Bourne Again Shell
+        description: Es el intérprete de comandos default en la mayoría de las distribuciones Linux.
+        links:
+            - title: Udemy - Bash - Intérprete de Comandos de Linux. Aprende desde cero. (GRATIS)
+              url: https://www.udemy.com/shell-interprete-de-comandos-de-linux-aprende-desde-cero/
+              type: course
+              rank: 5
+
+    linux_management:
+        title: Administración
+        description: Instalación y mantenimiento de programas.
+        links:
+            - title: "Udemy - GNU/Linux: Da tus primeros pasos!! (GRATIS)"
+              url: https://www.udemy.com/gnulinux-desde-cero/
+              type: course
+              rank: 5

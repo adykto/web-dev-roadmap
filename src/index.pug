@@ -1,0 +1,34 @@
+mixin renderSubject( subject, open, level )
+    if typeof subject.file === 'string'
+        +renderSubject(loadYAML(root + subject.file), true, level + 1)
+    else
+        details(open=open, class=`level-${level}`)
+            summary
+                strong #{subject.title}
+                br
+                label
+                    input(type="checkbox")
+                    | #{subject.description}
+
+            if typeof subject.links === 'object'
+                .study(open=open)
+                    each link in subject.links
+                        div
+                            a(href=link.url target='_blank')
+                                span #{icons[link.type]}&nbsp;
+                                span= link.title
+
+            if typeof subject.subjects === 'object'
+                each currentSubject in subject.subjects
+                    +renderSubject(currentSubject, true, level + 1)
+
+doctype html
+html(lang=lang)
+    head
+        meta(charset='utf-8')
+        title= map.title
+        style
+            include:stylus ./stylus/main.styl
+
+    body
+        +renderSubject(map, true, 0)
