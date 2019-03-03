@@ -3,7 +3,7 @@ let args = process.argv.slice(2),
     pug = require('pug'),
     yaml = require('js-yaml'),
     watch = require('node-watch'),
-    StaticServer = require('static-server'),
+    server = require('live-server'),
     lang = 'es',
     icons = { url: '🔗', book: '📕', course: '🎓', video: '▶️' },
     root = './src/',
@@ -18,14 +18,14 @@ if ( args.indexOf('build') >= 0 ) {
 }
 
 if ( args.indexOf('watch') >= 0 ) {
-    let server = new StaticServer({
-        rootPath: dist,
-        port: 8888
-    });
+    let params = {
+        root: dist,
+        port: 8888,
+        wait: 800,
+        logLevel: 1
+    };
 
-    server.start(function () {
-        console.log('Server listening to', server.port);
-    });
+    server.start(params);
 
     compile();
 
@@ -47,15 +47,8 @@ function compile() {
         };
 
         let compiler = pug.compileFile('src/index.pug', options);
-        let html = compiler(locals);
 
-        fs.writeFile('dist/index.html', html, function(err) {
-            if(err) {
-                throw err;
-            } else {
-                console.log('The file was saved!');
-            }
-        });
+        fs.writeFile('dist/index.html', compiler(locals));
     } catch (e) {
         console.log('Error:', e);
     }

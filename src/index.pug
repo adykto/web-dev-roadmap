@@ -1,6 +1,6 @@
 mixin renderSubject( subject, open, level )
     if typeof subject.file === 'string'
-        +renderSubject(loadYAML(root + subject.file), true, level + 1)
+        +renderSubject(loadYAML(root + subject.file), false, level + 1)
     else
         details(open=open, class=`level-${level}`)
             summary
@@ -8,6 +8,7 @@ mixin renderSubject( subject, open, level )
                 br
                 label
                     input(type="checkbox")
+                    span &nbsp;
                     | #{subject.description}
 
             if typeof subject.links === 'object'
@@ -20,7 +21,7 @@ mixin renderSubject( subject, open, level )
 
             if typeof subject.subjects === 'object'
                 each currentSubject in subject.subjects
-                    +renderSubject(currentSubject, true, level + 1)
+                    +renderSubject(currentSubject, false, level + 1)
 
 doctype html
 html(lang=lang)
