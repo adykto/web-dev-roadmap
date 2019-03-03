@@ -1,4 +1,5 @@
-let fs   = require('fs'),
+let args = process.argv.slice(2),
+    fs = require('fs'),
     pug = require('pug'),
     yaml = require('js-yaml'),
     watch = require('node-watch'),
@@ -12,16 +13,24 @@ if (!fs.existsSync(dist)){
     fs.mkdir(dist, { recursive: true });
 }
 
-watch(root, { recursive: true }, compile);
+if ( args.indexOf('build') >= 0 ) {
+    compile();
+}
 
-let server = new StaticServer({
-    rootPath: dist,
-    port: 8888
-});
+if ( args.indexOf('watch') >= 0 ) {
+    let server = new StaticServer({
+        rootPath: dist,
+        port: 8888
+    });
 
-server.start(function () {
-    console.log('Server listening to', server.port);
-});
+    server.start(function () {
+        console.log('Server listening to', server.port);
+    });
+
+    compile();
+
+    watch(root, { recursive: true }, compile);
+}
 
 function compile() {
     try {
