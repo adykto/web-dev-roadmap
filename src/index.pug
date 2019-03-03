@@ -28,20 +28,20 @@ html(lang=lang)
     head
         meta(charset='utf-8')
 
-        meta(name='description', content=map.description)
+        meta(name='description', content=data.description)
         meta(name='viewport', content='width=device-width, initial-scale=1')
 
         style
             include:stylus ./stylus/main.styl
 
-        title= map.title
+        title= data.title
 
     body
         header
             h1 WDRoadmap 0.0.1
 
         section
-            +renderSubject(map, true, 0)
+            +renderSubject(data, true, 0)
 
         footer
             span (CC) 2019 · WDRoadmap 0.0.1 · No rights reserved by Nobody.
